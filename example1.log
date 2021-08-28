@@ -1,0 +1,53 @@
+./example1.out ex.dat 
+
+-- plane wave data --
+ "ipw.txt" No.00 -- plane wave parameter --
+wave length of incident beam in vacuum      :               1
+refractive index of surrounding             :            1.33
+incident beam power per unit area           :           0.001
+x-poralization coefficient                  :      1+      0i
+y-poralization coefficient                  :      0+      0i
+x-component of translation vector           :               0
+y-component of translation vector           :               0
+z-component of translation vector           :               0
+rotation parameter theta               [rad]:             0.2
+rotation parameter phi                 [rad]:               0
+
+-- periodicity data --
+periodicity data file name : periodicity_data.txt
+periodicity setting        :          1
+lattice constant           :       0.65
+
+-- medium data --
+medium data file name                  : medium_data.txt
+medium (domain) id  1 refractive index :     1.6 +        0I
+medium (domain) id  2 refractive index :    0.06 +        4I
+
+-- mesh data --
+mesh data file name    : sphere_m2.msh
+node number            :     1090
+defined element number :     2172
+
+Total electromagnetic field at r=(  0.3, 0, 1.1 )
+type=0 setting ( 4 point Gauss-Legendre )
+Ex = -7.85761933680710e-03 -2.46850207419839e-02 I 
+Ey =  1.49850292483416e-16 -8.57275268043578e-16 I 
+Ez =  1.56305031782817e-02 -1.89738812272444e-03 I 
+Hx =  2.41411165777977e-16 +3.31477872956385e-16 I 
+Hy =  1.45357933653466e-03 -4.18480527019151e-02 I 
+Hz = -5.91618631228897e-16 +8.90685635552372e-16 I 
+type=1 setting ( 9 or 7 point Gauss-Legendre )
+Ex = -7.85772359389067e-03 -2.46838771582291e-02 I 
+Ey =  1.53455264988163e-16 -8.62472663816831e-16 I 
+Ez =  1.56295436472504e-02 -1.89789093660624e-03 I 
+Hx =  2.44745087911441e-16 +3.34079958792455e-16 I 
+Hy =  1.45772165383567e-03 -4.18518929198339e-02 I 
+Hz = -5.87993331324976e-16 +8.93443576500236e-16 I 
+
+Radiation force and torque
+type=0 setting ( 4 point Gauss-Legendre ) 
+F = ( 2.54258981790564e-04,-6.35613523619627e-18, 5.86216530851219e-04)
+N = (-5.75003022287661e-19, 2.85461138019661e-07, 2.13805012521276e-18), center of rotation ( 0, 0, 0)
+type=1 setting ( 9 or 7 point Gauss-Legendre ) 
+F = ( 2.53657272849155e-04,-9.54606131555596e-18, 5.83312012247651e-04)
+N = (-5.22486979557895e-19, 2.23510598726174e-07, 2.21581172023765e-18), center of rotation ( 0, 0, 0)
