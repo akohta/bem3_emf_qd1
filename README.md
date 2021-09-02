@@ -6,7 +6,7 @@ Intel Math Kernel Library is required. Gmsh is used for create a mesh data of ob
 The calculation program of quasi-periodic Green's function "d3_qpgf_d1" is used.
 
 ## Usage of example code  
-1. type 'make' command to compile
+1. type 'make' command to compile  
    The executable d3qd1_bv_solver, example1.out, example2.out are created. 
    The d3qd1_bv_solver is the main solver of boundary integral equations.
    The example1.out is the executable of souce code example1.c, it shows a simplest example of usage. 
