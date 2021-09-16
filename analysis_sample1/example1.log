@@ -1,0 +1,64 @@
+../example1.out ex1.dat 
+
+-- plane wave data --
+ "ipw.txt" No.00 -- plane wave parameter --
+wave length of incident beam in vacuum      :               1
+refractive index of surrounding             :            1.33
+incident beam power per unit area           :           0.001
+x-poralization coefficient                  :      1+      0i
+y-poralization coefficient                  :      0+      0i
+x-component of translation vector           :               0
+y-component of translation vector           :               0
+z-component of translation vector           :               0
+rotation parameter theta               [rad]:             0.2
+rotation parameter phi                 [rad]:             0.5
+ "ipw.txt" No.01 -- plane wave parameter --
+wave length of incident beam in vacuum      :               1
+refractive index of surrounding             :            1.33
+incident beam power per unit area           :           0.001
+x-poralization coefficient                  :      1+      0i
+y-poralization coefficient                  :      0+      0i
+x-component of translation vector           :               0
+y-component of translation vector           :               0
+z-component of translation vector           :               0
+rotation parameter theta               [rad]:             0.2
+rotation parameter phi                 [rad]:            -0.5
+
+-- periodicity data --
+periodicity data file name : periodicity_data.txt
+periodicity setting        :          1
+lattice constant           :       0.65
+
+-- medium data --
+medium data file name                  : medium_data.txt
+medium (domain) id  1 refractive index :     1.6 +        0I
+medium (domain) id  2 refractive index :    0.06 +        4I
+
+-- mesh data --
+mesh data file name    : sphere_m2.msh
+node number            :     1090
+defined element number :     2172
+
+Total electromagnetic field at r=(  0.3, 0, 1.1 )
+type=0 setting ( 4 point Gauss-Legendre )
+Ex = -2.15142896225988e-02 -5.41483719211376e-02 I 
+Ey = -1.45985111745759e-15 -1.90889377514044e-15 I 
+Ez =  1.03885316705564e-02 -2.17024749176247e-02 I 
+Hx =  1.07100200902545e-15 +4.97608138655475e-16 I 
+Hy = -2.58574085959512e-02 -1.06264391305493e-01 I 
+Hz =  1.13927964070958e-15 +2.16366095640566e-15 I 
+type=1 setting ( 9 or 7 point Gauss-Legendre )
+Ex = -2.15167222052074e-02 -5.41480075471605e-02 I 
+Ey = -1.46828079208846e-15 -1.95080496895312e-15 I 
+Ez =  1.03864324932644e-02 -2.17012735175698e-02 I 
+Hx =  1.08477815488961e-15 +5.01524819937470e-16 I 
+Hy = -2.58493109289534e-02 -1.06276854158396e-01 I 
+Hz =  1.09725325613677e-15 +2.13742326789218e-15 I 
+
+Radiation force and torque
+type=0 setting ( 4 point Gauss-Legendre ) 
+F = ( 8.00881744016152e-04,-3.22533205655492e-17, 2.36802754254526e-03)
+N = (-1.87821615119761e-18, 1.56494131050507e-06, 1.92940870494729e-18), center of rotation ( 0, 0, 0)
+type=1 setting ( 9 or 7 point Gauss-Legendre ) 
+F = ( 8.00333685911542e-04,-4.39372930399751e-17, 2.35559792489479e-03)
+N = (-1.55091732642262e-18, 1.27512122656764e-06, 1.87713089023394e-18), center of rotation ( 0, 0, 0)

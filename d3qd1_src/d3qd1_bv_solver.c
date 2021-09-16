@@ -8,6 +8,7 @@ int main(int argc,char **argv)
   print_dqd1(&qd1);
   //print_dqd1_mksa(&qd1);
   initialize_dqd1(&qd1);
+  output_node_particles(argv[5],&qd1);
 
   solve_bieq(&qd1);
   printf("\noutput data file : %s\n",argv[5]);

@@ -1,4 +1,4 @@
-./mie_mmls_solver ex.dat
+./mie_mmls_solver v1.dat
 
  "ipw.txt" No.00 -- plane wave --
 wave length of incident beam in vacuum      :               1
