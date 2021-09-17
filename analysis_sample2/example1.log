@@ -1,0 +1,52 @@
+../example1.out ex2.dat 
+
+-- plane wave data --
+ "ipw.txt" No.00 -- plane wave parameter --
+wave length of incident beam in vacuum      :               1
+refractive index of surrounding             :            1.33
+incident beam power per unit area           :           0.001
+x-poralization coefficient                  :      1+      0i
+y-poralization coefficient                  :      0+      0i
+x-component of translation vector           :               0
+y-component of translation vector           :               0
+z-component of translation vector           :               0
+rotation parameter theta               [rad]:             0.2
+rotation parameter phi                 [rad]:               0
+
+-- periodicity data --
+periodicity data file name : periodicity_data.txt
+periodicity setting        :          1
+lattice constant           :        0.4
+
+-- medium data --
+medium data file name                  : medium_data.txt
+medium (domain) id  1 refractive index :    0.06 +        4I
+
+-- mesh data --
+mesh data file name    : cone_m1.msh
+node number            :      893
+defined element number :     1818
+
+Total electromagnetic field at r=(  0.3, 0, 1.1 )
+type=0 setting ( 4 point Gauss-Legendre )
+Ex = -2.91741132631948e-02 -7.31329638481314e-03 I 
+Ey = -3.76402208646262e-13 +7.20355041491318e-14 I 
+Ez =  5.77553366047156e-03 +6.58815968097364e-04 I 
+Hx = -1.28394337869655e-13 -3.65123002510763e-13 I 
+Hy = -3.88132163084166e-02 -1.13176069248658e-02 I 
+Hz =  9.64412298988698e-12 -4.63257590913923e-13 I 
+type=1 setting ( 9 or 7 point Gauss-Legendre )
+Ex = -2.91745439520665e-02 -7.31350930378109e-03 I 
+Ey = -3.76330382742843e-13 +7.19374362419286e-14 I 
+Ez =  5.77553648284937e-03 +6.59010961208932e-04 I 
+Hx = -1.28244335819108e-13 -3.65005282866848e-13 I 
+Hy = -3.88132706727929e-02 -1.13174598335251e-02 I 
+Hz =  9.64380614473460e-12 -4.63487573101490e-13 I 
+
+Radiation force and torque
+type=0 setting ( 4 point Gauss-Legendre ) 
+F = ( 1.27390638436524e-05, 1.01304149463066e-14, 2.39159156958560e-04)
+N = (-7.76581617141134e-16,-3.71647904340588e-06, 9.53239946377438e-14), center of rotation ( 0, 0, 0)
+type=1 setting ( 9 or 7 point Gauss-Legendre ) 
+F = ( 1.35327163821704e-05, 6.14390499027284e-15, 2.78148499361469e-04)
+N = (-4.53158285737196e-16,-3.25590616297277e-06, 3.01626026414291e-14), center of rotation ( 0, 0, 0)

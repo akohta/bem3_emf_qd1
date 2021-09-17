@@ -15,16 +15,17 @@
 #define PREC_DEF_FN 0 // type settings of field analysis functions in force_FN().
 
 // -- d3qd1_setup.c --
-void read_dqd1(int argc,char **argv,DQD1 *dq1); // read datafile for solver
-void print_dqd1(DQD1 *qd);                      // print data
-void print_dqd1_mksa(DQD1 *qd);                 // print data in MKSA system of units
-void initialize_dqd1(DQD1 *qd);                 // memory allocation and initialize data for solver
-void finalize_dqd1(DQD1 *qd);                   // memory free 
-int domain_id(double *rt,DQD1 *qd);             // return domain id of point rt, return the main domain id if on boundary. for non periodic model.
-int q0_domain_id(double *rt,DQD1 *qd);          // return domain id of point rt, return the main domain id if on boundary. for periodic model.
-int q0_domain_id_l(double *rt,DQD1 *qd);        // ret periodic number l
-void dat_write(char *filename,DQD1 *qd);        // output analysis result to binary file with specified filename
-void dat_read(char *filename,DQD1 *qd);         // read datafile outputed by dat_write()
+void read_dqd1(int argc,char **argv,DQD1 *dq1);   // read datafile for solver
+void print_dqd1(DQD1 *qd);                        // print data
+void print_dqd1_mksa(DQD1 *qd);                   // print data in MKSA system of units
+void initialize_dqd1(DQD1 *qd);                   // memory allocation and initialize data for solver
+void finalize_dqd1(DQD1 *qd);                     // memory free 
+int domain_id(double *rt,DQD1 *qd);               // return domain id of point rt, return the main domain id if on boundary. for non periodic model.
+int q0_domain_id(double *rt,DQD1 *qd);            // return domain id of point rt, return the main domain id if on boundary. for periodic model.
+int q0_domain_id_l(double *rt,DQD1 *qd);          // ret periodic number l
+void dat_write(char *filename,DQD1 *qd);          // output analysis result to binary file with specified filename
+void dat_read(char *filename,DQD1 *qd);           // read datafile outputed by dat_write()
+void output_node_particles(char *fname,DQD1 *qd); // outputs the nodes as point cloud data ( .particles file ) 
 
 
 // -- d3qd1_solve_bieq.c --

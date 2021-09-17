@@ -1,0 +1,3 @@
+## periodicity datafile for bem3_emf_qd1
+# periodicity_setting(0:non-periodicity,1:periodic boundary condition) lattice_constant(d_x)
+1 0.40
