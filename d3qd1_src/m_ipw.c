@@ -82,6 +82,8 @@ void check_param_mipw(MIPW *obj)
       if(obj->lambda_0!=obj->bd.ipw[i].lambda0){ printf("check_param_mipw(),parameter error ipw lambda, exit\n"); exit(1);}
     }
   }
+  
+  obj->omega=2.0*M_PI/obj->lambda_0;
 }
 
 void setup_mipw(MIPW *obj)
@@ -89,6 +91,7 @@ void setup_mipw(MIPW *obj)
   int i;
 
   for(i=0;i<obj->n_ipw;i++)      setup_ipw(&(obj->bd.ipw[i]));
+  
 }
 
 void free_mipw(MIPW *obj)
