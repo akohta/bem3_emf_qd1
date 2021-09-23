@@ -37,7 +37,7 @@ The calculation program of quasi-periodic Green's function "d3_qpgf_d1" is used.
    The I_example2.png is the visualization result of intensity distributions, created by Gnuplot script gscritp_example2.plt
    (using ImageMagick to convert eps to png).  
    
-5. type './example3.out' with an argument of datafile name outputed by d3qd1_bv_solver.  
+5. type './example3.out' with an argument of datafile name output by d3qd1_bv_solver.  
    For example, './example3.out ex.dat'. This executable calculates instantaneous value of the electromagnetic fields, outputs them to png image files. 
    The image files are output to the folder which has a name adding "images" to the datafile name specified in the argument (file-extension is excluded). 
    Each image file has a name that indicates the cross section, field component, and number of time steps (ex. xz_Ex_014.png). 
