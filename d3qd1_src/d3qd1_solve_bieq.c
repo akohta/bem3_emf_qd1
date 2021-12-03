@@ -303,8 +303,14 @@ void create_matrix_csr_dac(int did,int cid,FILE *av,FILE *ap,FILE *ai,FILE *b,CM
     td=md->bd.sb[did].sid[t];
 
     for(tn=0;tn<4;tn++){
-      fread(tG,sizeof(double complex),Ne*4,fg);
-      fread(tH,sizeof(double complex),Ne*4,fh);
+      if(fread(tG,sizeof(double complex),Ne*4,fg)!=Ne*4){
+        printf("d3qd1_solve_bieq.c, create_matrix_csr_dac(), failed to read the tG. exit...\n");
+        exit(1);
+      }
+      if(fread(tH,sizeof(double complex),Ne*4,fh)!=Ne*4){
+        printf("d3qd1_solve_bieq.c, create_matrix_csr_dac(), failed to read the tH. exit...\n");
+        exit(1);
+      }
       if( tn==3 && ELT3==check_element_type(td,&(md->bd)) )  continue;
 
       fwrite(&(cm->nnz),sizeof(size_t),1,ap); // write A pointer
@@ -555,9 +561,18 @@ void solve_eh_bv(CMD *cm,DQD1 *md)
       atd=abs(at);
 
       for(tn=0;tn<4;tn++){
-        fread(tdG,sizeof(double complex),2*Ne*4,fdg);
-        fread(tdH,sizeof(double complex),2*Ne*4,fdh);
-        fread(tdF,sizeof(double),3,fdf);
+        if(fread(tdG,sizeof(double complex),2*Ne*4,fdg)!=2*Ne*4){
+          printf("d3qd1_solve_bieq.c, solve_eh_bv(), failed to read the tdG. exit...\n");
+          exit(1);
+        }
+        if(fread(tdH,sizeof(double complex),2*Ne*4,fdh)!=2*Ne*4){
+          printf("d3qd1_solve_bieq.c, solve_eh_bv(), failed to read the tdH. exit...\n");
+          exit(1);
+        }
+        if(fread(tdF,sizeof(double),3,fdf)!=3){
+          printf("d3qd1_solve_bieq.c, solve_eh_bv(), failed to read the tdF. exit...\n");
+          exit(1);
+        }
         if( tn==3 && ELT3==check_element_type(atd,&(md->bd)) )  continue;
 
         // tangential vector
@@ -671,8 +686,14 @@ void solve_deh_bv(CMD *cm,DQD1 *md)
       atd=abs(md->bd.sb[d].sid[t]);
 
       for(tn=0;tn<4;tn++){
-        fread(tG,sizeof(double complex),Ne*4,fg);
-        fread(tH,sizeof(double complex),Ne*4,fh);
+        if(fread(tG,sizeof(double complex),Ne*4,fg)!=Ne*4){
+          printf("d3qd1_solve_bieq.c, solve_deh_bv(), failed to read the tG. exit...\n");
+          exit(1);
+        }
+        if(fread(tH,sizeof(double complex),Ne*4,fh)!=Ne*4){
+          printf("d3qd1_solve_bieq.c, solve_deh_bv(), failed to read the tH. exit...\n");
+          exit(1);
+        }
         if( tn==3 && ELT3==check_element_type(atd,&(md->bd)) )  continue;
 
         for(i=0;i<6;i++){
@@ -789,9 +810,18 @@ void q0_solve_eh_bv(CMD *cm,DQD1 *md)
       atd=abs(at);
 
       for(tn=0;tn<4;tn++){
-        fread(tdG,sizeof(double complex),2*Ne*4,fdg);
-        fread(tdH,sizeof(double complex),2*Ne*4,fdh);
-        fread(tdF,sizeof(double),3,fdf);
+        if(fread(tdG,sizeof(double complex),2*Ne*4,fdg)!=2*Ne*4){
+          printf("d3qd1_solve_bieq.c, q0_solve_eh_bv(), failed to read the tdG. exit...\n");
+          exit(1);
+        }
+        if(fread(tdH,sizeof(double complex),2*Ne*4,fdh)!=2*Ne*4){
+          printf("d3qd1_solve_bieq.c, q0_solve_eh_bv(), failed to read the tdH. exit...\n");
+          exit(1);
+        }
+        if(fread(tdF,sizeof(double),3,fdf)!=3){
+          printf("d3qd1_solve_bieq.c, q0_solve_eh_bv(), failed to read the tdF. exit...\n");
+          exit(1);
+        }
         if( tn==3 && ELT3==check_element_type(atd,&(md->bd)) )  continue;
 
         // tangential vector
@@ -913,9 +943,18 @@ void q1_solve_eh_bv(CMD *cm,DQD1 *md)
       atd=abs(at);
 
       for(tn=0;tn<4;tn++){
-        fread(tdG,sizeof(double complex),2*Ne*4,fdg);
-        fread(tdH,sizeof(double complex),2*Ne*4,fdh);
-        fread(tdF,sizeof(double),3,fdf);
+        if(fread(tdG,sizeof(double complex),2*Ne*4,fdg)!=2*Ne*4){
+          printf("d3qd1_solve_bieq.c, q1_solve_eh_bv(), failed to read the tdG. exit...\n");
+          exit(1);
+        }
+        if(fread(tdH,sizeof(double complex),2*Ne*4,fdh)!=2*Ne*4){
+          printf("d3qd1_solve_bieq.c, q1_solve_eh_bv(), failed to read the tdH. exit...\n");
+          exit(1);
+        }
+        if(fread(tdF,sizeof(double),3,fdf)!=3){
+          printf("d3qd1_solve_bieq.c, q1_solve_eh_bv(), failed to read the tdF. exit...\n");
+          exit(1);
+        }
         if( tn==3 && ELT3==check_element_type(atd,&(md->bd)) )  continue;
 
         // tangential vector
